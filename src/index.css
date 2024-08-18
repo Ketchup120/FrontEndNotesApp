@@ -1,0 +1,264 @@
+body{
+  font-style: Geneva, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.group {
+  display: flex;
+  align-items: center;
+}
+.groupbar{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+.pfp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  justify-content: space-between;
+  height: 100%;
+  position: fixed;
+}
+.floatingbutton{
+  width: 60px; 
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  background-color: #16008B;
+  color: white;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 10px;
+}
+.grouplist{
+  height: 100%;
+  overflow: auto;
+}
+.defaultdisplay{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #DAE5F5;
+  height: 100vh;
+}
+.notespic{
+  margin-top:15%;
+  height: 220px;
+}
+.description {
+  flex: 1;
+ padding-bottom: 10px;
+} 
+.para {
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+}
+.encrypt {
+  font-size: 20px;
+  display: flex;
+  align-items:center ; 
+  justify-content: center; 
+  font-size: 1.5cap;
+  position: absolute;
+  bottom: 10px;
+}
+.lock{
+  height: 15px;
+  margin-right: 5px;
+}
+.notesdisplay{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #DAE5F5;
+  height: 100vh;
+}
+.notesbar{
+  box-sizing: border-box;
+  background-color: #001F8B;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 5px;
+  color: white;
+}
+.noteslist{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+  padding: 0px 20px 0px 20px;
+  overflow: auto;
+  height: 100%;
+}
+.note{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.datefooter{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  bottom: 0px;
+  right: 20px;
+}
+.dot{
+  width: 6px;
+  height: 6px;
+  margin: 8px;
+  border-radius: 50%;
+  background-color: black;
+}
+.notes{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 75%;
+  align-items: center;
+  left: 25%;
+}
+.inputbox{
+  box-sizing: border-box;
+  border-width: 20px;
+  height: 200px;
+  background-color: #071084;
+  padding: 20px;
+  width: 100%;
+}
+.textarea{
+  height: 160px;
+  width: 100%;
+  border: none;
+}
+.submitbutton{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.popupbackground{
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.popup {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.color-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border: 2px solid;
+  border-color:transparent ;
+}
+.grpnameinput{
+  border-radius: 10px;
+  height: 20px;
+  margin: 10px;
+  font-size: 15px;
+}
+.popupsubmit{
+  border-radius: 10px;
+  height: 25px;
+  margin: 5px;
+  width: 60px;
+}
+.popupfooter{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.inactive{
+  display: none;
+}
+@media screen and (max-width:600px) {
+  .notes{
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0%;
+  }
+  .defaultdisplay{
+    display: none;
+  }
+  .sidebar{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    background-color: white;
+  }
+    .floatingbutton{
+      width: 60px; 
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      background-color: #16008B;
+      color: white;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
