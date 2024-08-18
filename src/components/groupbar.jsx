@@ -1,5 +1,6 @@
 import { initials } from "../helpers/functions";
-const GroupBar = React.memo(({props,setindex})=>{
+import { memo } from 'react'
+const GroupBar =memo(({props,setindex,index})=>{
     const grpdisp = ()=>{
         if(screen.width<=600)
         {
@@ -11,7 +12,7 @@ const GroupBar = React.memo(({props,setindex})=>{
             setindex(props.id)
         }
     return(
-        <div className="groupbar" onClick={grpdisp}>
+        <div className="groupbar" style={{backgroundColor:index==props.id?"#2F2F2F2B":"white"}} onClick={grpdisp}>
             <div  id={props.id} className="pfp" style={{backgroundColor : props.colour}}>
                 {initials(props.name)}
             </div>

@@ -3,7 +3,8 @@ import Note from "./note"
 import { useState } from "react";
 import BackButton from "./back button";
 import {IoSend} from "react-icons/io5";
-const Notesdisplay = React.memo(({props,props2,activeindex,setnotes})=>{
+import { memo } from 'react'
+const Notesdisplay = memo(({props,props2,activeindex,setnotes})=>{
     const [inputValue, setInputValue] = useState('');
     const handleInputChange = (event) => {
         setInputValue(event.target.value);

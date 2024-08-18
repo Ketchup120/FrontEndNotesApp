@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
-const Popup = React.memo(({toggle,addgroup,settoggle}) => {
+import { memo } from 'react'
+const Popup =memo(({toggle,addgroup,settoggle}) => {
     const [inputValue,setinputValue] = useState("")
     const [color,setColor] = useState("none")
     const handleGroupNameChange = (e) => {

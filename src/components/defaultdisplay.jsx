@@ -1,6 +1,7 @@
 import disp from '../assets/display.png'
 import lock from '../assets/lock.png'
-const DefaultDisplay = React.memo(({props})=>{
+import { memo } from 'react'
+const DefaultDisplay = memo(({props})=>{
     return props == 0? (
         <div className='defaultdisplay'>
             <img src={disp} alt="Pocket Notes" className="notespic" />

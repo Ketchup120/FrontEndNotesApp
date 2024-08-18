@@ -1,5 +1,14 @@
-const Note = React.memo(({props,date})=>{
-    let dt = date
+import { memo } from "react"
+const Note = memo(({props,date})=>{
+    let dt
+    if (date instanceof Date)
+    {
+        dt = date
+    }
+    else
+    {
+        dt = new Date(Date.parse(date))
+    }
     let a = dt.toDateString()
     let b = dt.toLocaleTimeString([], { timeStyle: "short" })
     a = a.slice(4,a.length)

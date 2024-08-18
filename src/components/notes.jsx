@@ -1,7 +1,7 @@
 import DefaultDisplay from "./defaultdisplay";
 import Notesdisplay from "./notesdisplay";
-
-const Notes = React.memo(({group,notes,activeindex,setnotes})=>{
+import { memo } from 'react'
+const Notes = memo(({group,notes,activeindex,setnotes})=>{
 const addnotes = (a,i,d)=>{
         let temp = notes
         temp[i].notes = [...temp[i].notes,a]

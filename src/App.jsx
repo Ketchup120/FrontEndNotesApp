@@ -5,16 +5,31 @@ import Notes from './components/notes'
 import Popup from './components/popup'
 
 function App() {
-  const [group,SetGroup] = useState([])
-  const [notes,SetNotes] = useState([])
+  let inigrp=[]
+  let ininotes=[]
+  if(localStorage.getItem("object")!=null)
+  {
+    let a = JSON.parse(localStorage.getItem("object"))
+    inigrp = a["group"]
+    ininotes=a["notes"]
+  }
+  const [group,SetGroup] = useState(inigrp)
+  const [notes,SetNotes] = useState(ininotes)
   const [activeindex,SetActiveindex] = useState(0)
   const [popupToggle,setpopupToggle] = useState(0)
+  useEffect(()=>
+  {
+    let local = {"group":group,"notes":notes}
+    localStorage.setItem("object",JSON.stringify(local))
+    console.log("local")
+  },[group,notes])
   const setactiveindex =(a)=>{
     SetActiveindex(a)
   }
   const setnotes = (a)=>{
     SetNotes(a)
-    console.log("after"+notes)
+    let local = {"group":group,"notes":notes}
+    localStorage.setItem("object",JSON.stringify(local))
   }
   const toggle =()=>{
     if (popupToggle == 0)
@@ -37,7 +52,7 @@ function App() {
   }
   return (
     <div>
-       <Sidebar props = {group} setindex = {setactiveindex} popup = {toggle}/>
+       <Sidebar props = {group} setindex = {setactiveindex} popup = {toggle} index = {activeindex}/>
        <Notes group={group} notes={notes} activeindex={activeindex} setnotes={setnotes}/>
        <Popup toggle = {popupToggle} addgroup = {addGroup} settoggle = {toggle}/>
     </div>
