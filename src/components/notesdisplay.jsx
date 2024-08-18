@@ -9,8 +9,7 @@ const Notesdisplay = memo(({props,props2,activeindex,setnotes})=>{
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
       };
-    
-      const handleSubmit = () => {
+    const handleSubmit = () => {
         let d = new Date()
         setnotes(inputValue,props.id-1,d)
         setInputValue("")
@@ -29,7 +28,7 @@ const Notesdisplay = memo(({props,props2,activeindex,setnotes})=>{
             <div className="noteslist">
                 {props2.notes.map((val,index)=><Note props ={val} date={props2.date[index]}/>)}
             </div>
-            <div className="inputbox">
+            <div className="inputbox" >
                 <textarea className="textarea" placeholder="Enter Your Text Here ......" value={inputValue} onChange={handleInputChange}></textarea>
                 <IoSend className = "submitbutton" style={{color:inputValue == ""?"gray":"#16008B", }}onClick={handleSubmit}></IoSend>
             </div>

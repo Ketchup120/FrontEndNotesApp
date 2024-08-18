@@ -3,7 +3,7 @@ import GroupBar from './groupbar'
 const Sidebar = memo(({props,setindex,popup,index})=>{
     return(
         <div className='sidebar'>
-            <header>
+            <header style={{paddingLeft:"20px"}}>
                 <h1>Pocket Notes</h1>
             </header>
             <div className='grouplist'>
