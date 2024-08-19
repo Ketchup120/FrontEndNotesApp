@@ -5,10 +5,10 @@ function changeindex(){
     a[0].style.zIndex = 3
 }
 const BackButton = memo(()=>{
-    return (screen.width<=600)?(
-        <GoArrowLeft onClick={changeindex}>
+    return(
+        <GoArrowLeft onClick={changeindex} className="backbutton">
         </GoArrowLeft>
-    ):""
+    )
 })
 
 export default BackButton;

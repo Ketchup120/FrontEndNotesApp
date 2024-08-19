@@ -100,6 +100,9 @@ body{
   background-color: #DAE5F5;
   height: 100vh;
 }
+.backbutton{
+  display: none;
+}
 .notesbar{
   box-sizing: border-box;
   background-color: #001F8B;
@@ -260,5 +263,8 @@ body{
       position: absolute;
       right: 20px;
       bottom: 20px;
+    }
+    .backbutton{
+      display: block;
     }
   }

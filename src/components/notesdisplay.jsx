@@ -10,9 +10,12 @@ const Notesdisplay = memo(({props,props2,activeindex,setnotes})=>{
         setInputValue(event.target.value);
       };
     const handleSubmit = () => {
-        let d = new Date()
-        setnotes(inputValue,props.id-1,d)
-        setInputValue("")
+        if(inputValue!="")
+        {
+            let d = new Date()
+            setnotes(inputValue,props.id-1,d)
+            setInputValue("")
+        }
       };
     return (activeindex == props.id)?(
         <div className="notesdisplay">
